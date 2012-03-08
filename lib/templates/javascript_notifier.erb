@@ -10,6 +10,6 @@
     Airbrake.setKey('#{api_key}');
     Airbrake.setHost('#{host}');
     Airbrake.setEnvironment('#{environment}');
-    Airbrake.setErrorDefaults({ url: "#{escape_javascript url}", component: "#{controller_name}", action: "#{action_name}" });
+    Airbrake.setErrorDefaults({ url: "#{escape_javascript url}", component: "#{controller_name}", action: "#{action_name}", 'cgi-data': { 'HTTP_REMOTE_IP': "#{remote_ip}" } });
   }
 %>

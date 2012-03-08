@@ -25,7 +25,8 @@ module Airbrake
             :environment     => Airbrake.configuration.environment_name,
             :action_name     => action_name,
             :controller_name => controller_name,
-            :url             => request.url
+            :url             => request.url,
+            :remote_ip       => request.remote_ip
           }
         }
 
